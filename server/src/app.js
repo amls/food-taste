@@ -8,9 +8,10 @@ app.use(morgan('combined'))
 app.use(bodyParser.json())
 app.use(cors())//pang worldwide ma access security risks research more next time
 
-app.get('/status', (req,res) =>{
+//rest service 
+app.post('/register', (req,res) =>{
   res.send({
-      message: 'hello world!'
+      message: `Hello ${req.body.email}! Your user was registed! Have fun!`
   })
 })
 
